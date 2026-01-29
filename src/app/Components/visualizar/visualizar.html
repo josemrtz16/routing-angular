@@ -1,0 +1,29 @@
+<div [className]="'container mt-3'">
+
+<h3>Ver Videojuegos</h3>
+
+<table [className]="'table table-table-striped'">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Nombre</th>
+            <th>Plataforma</th>
+            <th>PVP</th>
+            <th>Eliminar</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let elemento of this.servicio.arrVideojuegos">
+            <td>{{elemento.id}}</td>
+            <td>{{elemento.nombre}}</td>
+            <td>{{elemento.plataforma}}</td>
+            <td>{{elemento.pvp}}</td>
+            <td><button (click)="eliminar(elemento.id)" [className]="'btn btn-danger'">Eliminar</button></td>
+        </tr>
+    </tbody>
+</table>
+
+<hr>
+<a routerLink="">Volver a inicio</a>
+
+</div>

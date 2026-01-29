@@ -1,0 +1,21 @@
+<div [className]="'container mt-3'">
+<h3>Insertar Videojuegos</h3>
+
+<label>Nombre</label>
+<input type="text" name="nombre" #nombre [className]="'form form-control'">
+
+<label>Plataforma</label>
+<select name="plataforma" #plataforma [className]="'form form-control'">
+    <option value="Nintendo">Nintendo</option>
+    <option value="Playstation">Playstation</option>
+    <option value="Xbox">Xbox</option>
+</select>
+
+<label>PVP</label>
+<input type="number" name="pvp" #pvp [className]="'form form-control'">
+
+<button (click)="insertar(nombre.value, plataforma.value, pvp.value)" [className]="'btn btn-primary mt-3'">Insertar</button>
+
+<hr>
+<p><a routerLink="">Volver al inicio</a></p>
+</div>
