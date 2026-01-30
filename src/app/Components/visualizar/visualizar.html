@@ -4,13 +4,11 @@
 
 <table [className]="'table table-table-striped'">
     <thead>
-        <tr>
             <th>ID</th>
             <th>Nombre</th>
             <th>Plataforma</th>
             <th>PVP</th>
             <th>Eliminar</th>
-        </tr>
     </thead>
     <tbody>
         <tr *ngFor="let elemento of this.servicio.arrVideojuegos">
@@ -25,5 +23,6 @@
 
 <hr>
 <a routerLink="">Volver a inicio</a>
+
 
 </div>
